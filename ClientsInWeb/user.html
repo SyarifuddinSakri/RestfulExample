@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Database</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    
+    <div id="getUsers" class="crud" onclick="getUsers()">Show All User
+        <button>Get Users</button>
+    </div>
+    <div id="createUser" class="crud">Create User
+        <!-- <input class="input" type="number" id="inputUserID" placeholder="Enter the UserID"> -->
+        <input class="input" type="text" id="inputUserFirstName" placeholder="First Name">
+        <input class="input" type="text" id="inputUserLastName" placeholder="Last Name">
+        <input class="input" type="number" id="inputUserAge" placeholder="Age">
+        <input class="input" type="text" id="inputUserOccupation" placeholder="Occupation">
+        <input class="input" type="text" id="inputUserMail" placeholder="Mail">
+        <input type="date" id="inputUserJoinDate" placeholder="Date Join">
+        <button id="buttonCreateUser" onclick="createUser()">Create New User</button>
+        <button id="saveData" onclick="saveData()">Save Data</button>
+    </div>
+    <div id="updateUser" class="crud">Update User
+        <input class="input" type="number" id="updateUserID" placeholder="Enter the UserID">
+        <input class="input" type="text" id="updateUserFirstName" placeholder="First Name">
+        <input class="input" type="text" id="updateUserLastName" placeholder="Last Name">
+        <input class="input" type="number" id="updateUserAge" placeholder="Age">
+        <input class="input" type="text" id="updateUserOccupation" placeholder="Occupation">
+        <input class="input" type="text" id="updateUserMail" placeholder="Mail">
+        <input type="date" id="updateUserJoinDate" placeholder="Date Join">
+        <button id="buttonCreateUser" onclick="updateUser()">Update User</button>
+        <button id="updateData" onclick="saveData()">Save Data</button>
+    </div>
+    <div id="deleteUser" class="crud">Remove User
+        <input type="number" id="deleteUserID" placeholder="To be Removed UserID">
+        <button id="deleteUserButton" onclick="deleteUser()">Delete User</button>
+    </div>
+    <div id="query" class="crud">Filter by Age
+        <input type="number" id="minAgeInput" placeholder="Min Age">
+        <input type="number" id="maxAgeInput" placeholder="Max Age">
+        <button onclick="filterByAgeBetween()">Filter Age</button>
+    </div>
+    <div id="queryMinAge" class="crud">Filter by Min Age
+        <input type="number" id="minAge" placeholder="Min Age">
+        <button onclick="filterByMinAge()">Filter Age</button>
+    </div>
+    <div id="queryDateRange" class="crud">Filter by Date Range
+        <input type="date" id="startDateInput" placeholder="Start Date">
+        <input type="date" id="endDateInput" placeholder="End Date">
+        <button onclick="filterDateRange()">Filter by date range</button>
+    </div>
+    
+</body>
+<script src="user.js"></script>
+</html>
